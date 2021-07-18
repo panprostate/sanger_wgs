@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Sanger Pipeline
 
 <!-- badges: start -->
