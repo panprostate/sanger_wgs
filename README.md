@@ -110,10 +110,9 @@ As 2021,`biobambam2` is outdated and unsupported. `biobambam2` depends
 on the library `libmaus2` that is outdate and unsupported as well.
 Alternativelly, `gatk FastqToSam` can be used to a obtain same results.
 
-To merge two files
+Here the example code to merge two files
 `PCAWG.faeb4dd6-68d9-4bed-82e8-d12adca6b28c_6_r1.fastq.gz`,
-`PCAWG.faeb4dd6-68d9-4bed-82e8-d12adca6b28c_6_r2.fastq.gz`, here the
-example code:
+`PCAWG.faeb4dd6-68d9-4bed-82e8-d12adca6b28c_6_r2.fastq.gz`,:
 ```
         gatk FastqToSam --SEQUENCING_CENTER  WCM
                         --READ_GROUP_NAME    faeb4dd6-68d9-4bed-82e8-d12adca6b28c_6
