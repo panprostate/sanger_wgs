@@ -174,7 +174,20 @@ Example code is well documented in
 Australian data,  version 2.0.3 was used, and `ds-wrapper.pl` was run
 instead of `ds-cgpmap.pl`.
 
-Below is an example code for an Australian sample using `singularity`.
+Reference for mapping can be downloaded from:
+```
+ftp://ftp.sanger.ac.uk/pub/cancer/dockstore/human/core_ref_GRCh37d5.tar.gz
+ftp://ftp.sanger.ac.uk/pub/cancer/dockstore/human/bwa_idx_GRCh37d5.tar.gz
+```
+
+Image can be donwload using `singularity` with:
+
+```
+export CGPMAP_VER=2.0.3
+singularity pull docker://quay.io/wtsicgp/dockstore-cgpmap:$CGPMAP_VER
+```
+
+Below is an example code for a sample using `singularity`.
 
 ```
     singularity exec -i --bind
@@ -192,9 +205,29 @@ file to a more suitable name, such as `TestS1.mapped.bam\`.
 
 # Variant calling
 
-Running `cgpwgs`: 
+Information on how to run`cgpwgs` can be found in the relative wiki at https://github.com/cancerit/dockstore-cgpwgs/wiki/Running-under-singularity. 
 
-Example code Australian samples using Singularity
+Reference can be dowbloaded using:
+```
+mkdir ref
+cd ref
+echo 'ftp://ftp.sanger.ac.uk/pub/cancer/dockstore/human/core_ref_GRCh37d5.tar.gz
+ftp://ftp.sanger.ac.uk/pub/cancer/dockstore/human/qcGenotype_GRCh37d5.tar.gz
+ftp://ftp.sanger.ac.uk/pub/cancer/dockstore/human/SNV_INDEL_ref_GRCh37d5-fragment.tar.gz
+ftp://ftp.sanger.ac.uk/pub/cancer/dockstore/human/VAGrENT_ref_GRCh37d5_ensembl_75.tar.gz
+ftp://ftp.sanger.ac.uk/pub/cancer/dockstore/human/CNV_SV_ref_GRCh37d5_brass6+.tar.gz' \
+| xargs -tI {} bash -c 'curl -L {} | tar --strip-components 1 -zx'
+```
+
+I
+Image can be donwload using `singularity` with:
+```
+xport CGPWGS_VER=1.1.2 
+singularity pull docker://quay.io/wtsicgp/dockstore-cgpwgs:$CGPWGS_VER
+```
+
+
+Example code using `singularity`
 
     singularity exec -i --bind
      {input_dir}:/mnt/in/,{output_dir}:/mnt/out,{reference_dir}:/mnt/reference
