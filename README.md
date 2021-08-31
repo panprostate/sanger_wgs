@@ -19,7 +19,7 @@ allignment and variant calling.
 -   `gatk`: <https://gatk.broadinstitute.org/hc/en-us>
 -   `cgpNgsQc`: <https://github.com/cancerit/cgpNgsQc>
 -   `cgpmap-2.0.3`: <https://github.com/cancerit/dockstore-cgpmap>
--   `cgpwgs-1.1.2`: <https://github.com/cancerit/dockstore-cgpwgs>
+-   `cgpwgs-1.1.5`: <https://github.com/cancerit/dockstore-cgpwgs>
 -   `udocker` or `singularity`
 
 ## Reference Files
