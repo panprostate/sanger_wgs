@@ -49,7 +49,7 @@ be used (<https://github.com/eddieimada/fastqsplit>).
 The guideline for `FASTQ` file naming is
 `{sample}_{flowcell}_{barcode}_L00{lane}_R1.fastq.gz`
 
-## Convertion to BAM
+## Conversion to BAM
 
 In this step, files were converted to BAM with read group info. For each
 of these per-lane FASTQ files, the `fastqtobam` in `biobambam2` package
